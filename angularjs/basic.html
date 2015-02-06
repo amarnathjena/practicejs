@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Basic Angular Practice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src= "angular-1.4.js"></script>
+    </head>
+    <body>
+<!--        <fieldset>
+            <legend>On key press event</legend>
+            <div ng-app="">
+                <p>Name: <input type="text" ng-model="name"></p>
+                <p ng-bind="name"></p>
+            </div>
+        </fieldset>-->
+        
+<!--        <fieldset>
+            <legend>On key up event</legend>
+            <div ng-app="">
+            Name: <input ng-keyup="count=count+1" ng-init="count=0"> key up count: {{count}}
+            </div>
+        </fieldset>-->
+        <fieldset>
+            <legend>On key up event with event</legend>
+            <p>Typing in the input box below updates the keycode</p>
+            <div ng-app="">
+                <input ng-keyup="event=$event">
+                <p>event keyCode: {{ event.keyCode }}</p>
+                <p>event altKey: {{ event.altKey }}</p>
+            </div>
+        </fieldset>
+<!--        <fieldset>
+            <legend>Work with controller</legend>
+            <div ng-app="" ng-controller="personController">
+            First Name: <input type="text" ng-model="firstName"><br>
+            Last Name: <input type="text" ng-model="lastName"><br>
+            <br>
+            Full Name: {{firstName + " " + lastName}}
+            </div>
+            <script type="text/javascript">
+                function personController($scope) {
+                    $scope.firstName = "John";
+                    $scope.lastName = "Doe";
+                }
+            </script> 
+        </fieldset>-->
+    </body>
+</html>
